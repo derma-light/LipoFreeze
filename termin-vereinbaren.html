@@ -321,7 +321,7 @@
     <script>
       async function loadDropdownOptions() {
   try {
-    const response = await fetch('https://laser-haarentfernung.hamburg/Terminvorschlag/options.json');
+    const response = await fetch('./options.json');
     if (!response.ok) {
       throw new Error(`HTTP-Fehler: ${response.status}`);
     }
