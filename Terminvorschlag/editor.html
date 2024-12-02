@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Editor</title>
+</head>
+<body>
+    <h2>Dropdown Optionen bearbeiten</h2>
+    <textarea id="jsonEditor" rows="20" cols="100"></textarea><br>
+    <button onclick="saveJson()">Speichern</button>
+
+    <script>
+        // JSON-Datei laden
+        fetch('options.json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('jsonEditor').value = JSON.stringify(data, null, 4);
+            });
+
+        // JSON speichern
+        function saveJson() {
+            const updatedJson = document.getElementById('jsonEditor').value;
+            fetch('save_json.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: updatedJson,
+            })
+            .then(response => response.text())
+            .then(data => {
+                alert('Änderungen gespeichert: ' + data);
+            })
+            .catch(error => {
+                console.error('Fehler:', error);
+            });
+        }
+    </script>
+</body>
+</html>
