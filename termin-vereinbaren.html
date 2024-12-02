@@ -321,7 +321,7 @@
     <script>
       async function loadDropdownOptions() {
   try {
-    const response = await fetch('/LipoFreeze/Terminvorschlag/options.json');
+    const response = await fetch('https://derma-light.github.io/Lipofreeze/Terminvorschlag/options.json');
     if (!response.ok) {
       throw new Error(`HTTP-Fehler: ${response.status}`);
     }
