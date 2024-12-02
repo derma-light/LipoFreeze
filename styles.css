@@ -1,0 +1,286 @@
+.content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding-bottom: 2%;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: #274472;
+    margin-bottom: 0.5rem;
+    margin-top: 2rem; /* Abstand zwischen der Nav-Bar und der H1 */
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    color: #274472;
+    margin-bottom: 1rem;
+  }
+  
+  .intro-text {
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  
+  .text-blocks {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 1 rem;
+    margin-top: 2rem;
+  }
+  
+
+  .block-left {
+    flex: 0.8; /* Größe des Blocks */
+    background-color: #5aa7cd;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 8px;
+    font-size: 2.1rem;
+    /* Zentrierung */
+    display: flex;
+    justify-content: center; /* Horizontal zentrieren */
+    align-items: center; /* Vertikal zentrieren */
+  }
+  
+  
+  .block-right {
+    flex: 1.2; /* Größerer Block */
+    background-color: #f8f9fc;
+    color: #333;
+    text-align: left;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  
+  .block-right h3 {
+    flex: 1.4; /* Nimmt 140% des verfügbaren Platzes ein */
+    color: #274472;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .block-right p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .cta-section {
+    background-color: #5aa7cd; /* CTA Hintergrundfarbe */
+    color: white;
+    padding: 40px;
+    text-align: center;
+    border-radius: 8px; /* Abgerundete Ecken */
+    margin: 50px 0;
+}
+.cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffffff !important;
+}
+.cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+.cta-section .btn {
+    background-color: #ffffff;
+    color: #5aa7cd;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+.cta-section .btn:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.text-section {
+  max-width: 600px; /* Begrenzung der Textbreite für optimale Lesbarkeit */
+  margin: 0 auto; /* Zentriert die Text-Section auf der Seite */
+  line-height: 1.6; /* Erhöht den Zeilenabstand für bessere Lesbarkeit */
+  font-size: 1rem; /* Angenehme Schriftgröße */
+  color: #333; /* Dunklere Schrift für Kontrast */
+  font-family: Arial, sans-serif; /* Lesefreundliche Schriftart */
+  text-align: left; /* Linksbündiger Text */
+  padding: 1rem; /* Innenabstand */
+}
+
+.text-section h2 {
+  font-size: 1.5rem; /* Überschrift größer als Text */
+  color: #274472; /* Abhebung durch Farbe */
+  margin-bottom: 0.8rem; /* Abstand zur Überschrift */
+}
+/* Gesamte Sektion */
+.three-blocks-section {
+  text-align: center; /* Zentriert die Überschrift und Textblöcke */
+  padding: 2rem;
+}
+
+.section-heading {
+  font-size: 2rem; /* Größe der Überschrift */
+  color: #333; /* Dunkle Schrift */
+  margin-bottom: 2rem; /* Abstand zur Sektion */
+  font-family: Arial, sans-serif; /* Lesbare Schriftart */
+}
+
+/* Gesamte Sektion */
+.three-blocks-section {
+  text-align: center; /* Zentriert die Überschrift */
+  padding: 2rem;
+}
+
+.section-heading {
+  font-size: 2rem; /* Größe der Überschrift */
+  color: #333; /* Dunkle Schrift */
+  margin-bottom: 2rem; /* Abstand zur Sektion */
+  font-family: Arial, sans-serif; /* Lesbare Schriftart */
+}
+
+/* Flexbox nur für die Blöcke */
+.text-blocks-container {
+  display: flex;
+  justify-content: space-between; /* Abstand zwischen den Blöcken */
+  gap: 1rem; /* Lücke zwischen den Blöcken */
+}
+
+.text-block {
+  flex: 1; /* Gleicher Platz für alle Blöcke */
+  background-color: #5aa7cd; /* Blauer Hintergrund */
+  color: white; /* Weiße Schrift */
+  text-align: center; /* Zentrierter Text */
+  padding: 1.5rem;
+  border-radius: 8px; /* Abgerundete Ecken */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+}
+
+.text-block h3 {
+  margin-bottom: 1rem; /* Abstand zwischen Überschrift und Text */
+  font-size: 1.2rem; /* Überschriftengröße */
+}
+
+.text-block p {
+  font-size: 1rem; /* Angenehme Schriftgröße */
+  line-height: 1.6; /* Lesbarer Zeilenabstand */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .text-blocks-container {
+    flex-direction: column; /* Blöcke untereinander auf kleinen Bildschirmen */
+    gap: 1.5rem; /* Vertikaler Abstand */
+  }
+}
+/* Gesamte Sektion */
+.pricing-section {
+  background-color: #5aa7cd; /* Blauer Hintergrund */
+  color: white; /* Weiße Schrift */
+  padding: 3rem 1rem;
+  text-align: center; /* Zentrierte Inhalte */
+  font-family: Arial, sans-serif;
+}
+
+.pricing-heading {
+  font-size: 2rem; /* Große H2-Überschrift */
+  margin-bottom: 2rem; /* Abstand zu den Preisschildern */
+}
+
+/* Container für die Preisschilder */
+.price-container {
+  display: flex;
+  justify-content: center; /* Zentriert die Preisschilder */
+  gap: 1.5rem; /* Abstand zwischen den Karten */
+  flex-wrap: wrap; /* Sorgt dafür, dass die Karten bei kleinen Bildschirmen umbrechen */
+}
+
+/* Preisschilder */
+.price-card {
+  background-color: white; /* Weißer Hintergrund */
+  color: #333; /* Dunkler Text */
+  padding: 1.5rem;
+  border-radius: 8px; /* Abgerundete Ecken */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+  text-align: center;
+  flex: 1;
+  max-width: 300px; /* Maximale Breite eines Preisschilds */
+}
+
+.price-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #274472; /* Dunkler Blauton */
+}
+
+.price-card p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #5aa7cd; /* Blauer Text */
+  margin-bottom: 1rem;
+}
+
+.price-card ul {
+  list-style: none; /* Keine Bulletpoints */
+  padding: 0;
+  margin: 0;
+}
+
+.price-card li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Responsives Verhalten */
+@media (max-width: 768px) {
+  .price-container {
+    flex-direction: column; /* Karten untereinander auf kleinen Bildschirmen */
+    align-items: center; /* Zentrierung */
+  }
+
+  .price-card {
+    max-width: 100%; /* Breite anpassen */
+    margin-bottom: 1.5rem; /* Abstand zwischen Karten */
+  }
+}
+/* Styling für die Navbar */
+.navbar-nav .nav-link {
+  font-weight: bold; /* Kräftigere Schrift */
+  font-size: 16px;   /* Optionale Schriftgröße, falls du eine bestimmte Größe möchtest */
+}
+
+/* Hover-Effekt für die Menüpunkte */
+.navbar-nav .nav-link:hover {
+  color: #007bff !important; /* Farbe #7a9271 bei Hover */
+}
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0.95); /* Weiß mit Transparenz */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+}
+
+/* Logo skalieren */
+.navbar-logo {
+  height: auto; /* Die Höhe des Logos entspricht der Summe der beiden Buttons */
+  width: 220;  /* Automatische Breite, damit die Proportionen erhalten bleiben */
+}
+
+/* Footer-Farbe */
+
+footer, .footer, #footer {
+  background-color: #007bff !important; /* Deine gewünschte Farbe */
+  color: #ffffff !important;
+}
+
+footer a, footer a:hover {
+  color: #ffffff !important;
+}
+
+/* Styling für die Navbar */
+.navbar-nav .nav-link {
+  font-weight: bold; /* Kräftigere Schrift */
+  font-size: 16px;   /* Optionale Schriftgröße, falls du eine bestimmte Größe möchtest */
+}
