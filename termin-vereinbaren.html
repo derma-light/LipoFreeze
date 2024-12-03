@@ -332,40 +332,67 @@ document.querySelectorAll('.showMore').forEach(function(button) {
 
     <!-- Dynamische Optionen laden -->
     <script>
-      async function loadDropdownOptions() {
-        try {
-          const response = await fetch('https://github.com/derma-light/LipoFreeze/tree/f24b5f5f6101dd640a57c728d8b8e57ec1e0b24f/Terminvorschlag/Terminvorschlag/options.json');
-          const data = await response.json();
+async function loadDropdownOptions() {
+  try {
+    console.log("Lade Optionen aus options.json...");
 
-          // Dropdowns füllen
-          const dropdowns = {
-            behandlung: data.behandlung,
-            woche: data.woche,
-            woche2: data.woche,
-            woche3: data.woche,
-            start: data.start,
-            start2: data.start,
-            start3: data.start,
-            ende: data.ende,
-            ende2: data.ende,
-            ende3: data.ende
-          };
+    const response = await fetch('./options.json');
+    if (!response.ok) {
+      throw new Error(`HTTP-Fehler: ${response.status}`);
+    }
+    const data = await response.json();
 
-          Object.keys(dropdowns).forEach(id => {
-            const selectElement = document.getElementById(id);
-            dropdowns[id].forEach(option => {
-              const opt = document.createElement('option');
-              opt.value = option;
-              opt.textContent = option;
-              selectElement.appendChild(opt);
-            });
-          });
-        } catch (error) {
-          console.error('Fehler beim Laden der Optionen:', error);
-        }
+    console.log("Optionen erfolgreich geladen:", data);
+
+    // Dropdowns definieren
+    const dropdowns = {
+      behandlung: data.behandlung,
+      woche: data.woche,
+      woche2: data.woche,
+      woche3: data.woche,
+      start: data.start,
+      start2: data.start,
+      start3: data.start,
+      ende: data.ende,
+      ende2: data.ende,
+      ende3: data.ende
+    };
+
+    // Dropdowns füllen
+    Object.keys(dropdowns).forEach(id => {
+      const selectElement = document.getElementById(id);
+      if (!selectElement) {
+        console.warn(`Dropdown mit ID '${id}' nicht gefunden. Überspringe...`);
+        return; // Fahre mit dem nächsten Dropdown fort
       }
 
-      document.addEventListener('DOMContentLoaded', loadDropdownOptions);
+      // Optionen hinzufügen
+      dropdowns[id].forEach(option => {
+        const opt = document.createElement('option');
+        opt.value = option;
+        opt.textContent = option;
+        selectElement.appendChild(opt);
+      });
+    });
+
+    console.log("Dropdown-Befüllung abgeschlossen.");
+  } catch (error) {
+    console.error('Fehler beim Laden der Optionen:', error);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', loadDropdownOptions);
+
+Object.keys(dropdowns).forEach(id => {
+  console.log(`Prüfe Dropdown mit ID '${id}'...`);
+  const selectElement = document.getElementById(id);
+  if (!selectElement) {
+    console.warn(`Dropdown mit ID '${id}' nicht gefunden.`);
+    return;
+  }
+  console.log(`Fülle Dropdown '${id}'...`);
+});        
+
     </script>
   </body>
 </html>
