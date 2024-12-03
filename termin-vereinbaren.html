@@ -103,7 +103,7 @@
     
   <div class="container-small">
       <div class="card p-4">
-        <form id="contact-form" action="Terminvorschlag/submit_form.php" method="post">
+        <form id="contact-form" action="https://formspree.io/f/mrbgjzpr" method="POST">
           
           <!-- Vorname -->
           <div class="row mb-3">
@@ -248,7 +248,7 @@
           <!-- Absenden -->
           <div class="row mb-3">
             <div class="col-md-12">
-              <button type="submit" class="btn btn-success">Absenden</button>
+				<button type="submit" class="btn btn-success" id="submit-button">Absenden</button>
             </div>
           </div>
         </form>
@@ -322,6 +322,13 @@ document.querySelectorAll('.showMore').forEach(function(button) {
     });
 });
     </script>
+	
+<script>
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', function (e) {
+        document.getElementById('submit-button').textContent = 'Wird gesendet...';
+    });
+</script>
 
     <!-- Dynamische Optionen laden -->
     <script>
