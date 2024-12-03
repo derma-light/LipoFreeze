@@ -103,162 +103,87 @@
       <div class="card p-4">
         <form id="contact-form" action="Terminvorschlag/submit_form.php" method="post">
           
-          <!-- Vorname -->
-          <div class="row mb-3">
-            <div class="col-md-6">
-              <div class="form-group bg-cyan bg-lightGreen-hover fg-white">
-                <label for="firstName">Vor- und Nachname</label>
-                <input name="firstName" type="text" id="firstName" class="form-control" placeholder="Vor- und Nachname" required minlength="2">
-              </div>
-            </div>
-            
-            <!-- E-Mail -->
-            <div class="col-md-6">
-              <div class="form-group bg-cyan bg-lightGreen-hover fg-white">
-                <label for="email">E-Mail Adresse</label>
-                <input name="email" type="email" id="email" class="form-control" placeholder="Wir teilen niemals Ihre E-Mail-Adresse" required>
-              </div>
-            </div>
-          </div>
-
-          <!-- Behandlung -->
-          <div class="row mb-3">
-            <div class="col-md-12">
-              <div class="form-group bg-cyan bg-lightGreen-hover fg-white">
-                <label for="behandlung">Behandlung:</label>
-                <select id="behandlung" name="behandlung" class="form-select" required>
-                  <option value="" disabled selected>Bitte wählen</option>
-                </select>
-              </div>
-            </div>
-          </div>
-
-          <!-- Terminvorschläge -->
-          <div class="row mb-3">
-            <div class="col-md-6">
-              <div class="form-group bg-cyan bg-lightGreen-hover fg-white">
-                <label for="woche">1. Terminvorschlag:</label>
-                <select id="woche" name="woche" class="form-select" required>
-                  <option value="" disabled selected>Bitte wählen</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="form-group bg-cyan bg-lightGreen-hover fg-white">
-                <label for="start">frühstens:</label>
-                <select id="start" name="start" class="form-select" required>
-                  <option value="" disabled selected>ab ...</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="form-group bg-cyan bg-lightGreen-hover fg-white">
-                <label for="ende">spätestens:</label>
-                <select id="ende" name="ende" class="form-select" required>
-                  <option value="" disabled selected>bis ...</option>
-                </select>
-              </div>
-            </div>
-          </div>
-
-          <!-- Zusätzlicher Vorschlag Button -->
-          <button type="button" class="showMore btn btn-outline-primary btn-sm" data-target="addressFields">2. Vorschlag eingeben</button><br>
-
-          <!-- Versteckte Felder für weitere Terminvorschläge -->
-          <div id="addressFields" class="hidden">
-            <div class="row mb-3">
-              <div class="col-md-6">
-                <div class="form-group bg-cyan bg-lightGreen-hover fg-white">
-                  <label for="woche2">2. Terminvorschlag:</label>
-                  <select id="woche2" name="woche2" class="form-select">
-                    <option value="" disabled selected>Bitte wählen</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="col-md-3">
-                <div class="form-group bg-cyan bg-lightGreen-hover fg-white">
-                  <label for="start2">frühstens:</label>
-                  <select id="start2" name="start2" class="form-select">
-                    <option value="" disabled selected>ab ...</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="col-md-3">
-                <div class="form-group bg-cyan bg-lightGreen-hover fg-white">
-                  <label for="ende2">spätestens:</label>
-                  <select id="ende2" name="ende2" class="form-select">
-                    <option value="" disabled selected>bis ...</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-
-            <!-- Weitere Felder anzeigen Button -->
-            <button type="button" class="showMore btn btn-outline-primary btn-sm" data-target="extraFields">3. Vorschlag eingeben</button><br>
-          </div>
-
-          <!-- 3. Vorschlag -->
-          <div id="extraFields" class="hidden">
-            <div class="row mb-3">
-              <div class="col-md-6">
-                <div class="form-group bg-cyan bg-lightGreen-hover fg-white">
-                  <label for="woche3">3. Terminvorschlag:</label>
-                  <select id="woche3" name="woche3" class="form-select">
-                    <option value="" disabled selected>Bitte wählen</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="col-md-3">
-                <div class="form-group bg-cyan bg-lightGreen-hover fg-white">
-                  <label for="start3">frühstens:</label>
-                  <select id="start3" name="start3" class="form-select">
-                    <option value="" disabled selected>ab ...</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="col-md-3">
-                <div class="form-group bg-cyan bg-lightGreen-hover fg-white">
-                  <label for="ende3">spätestens:</label>
-                  <select id="ende3" name="ende3" class="form-select">
-                    <option value="" disabled selected>bis ...</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Mitteilung -->
-          <div class="row mb-3">
-            <div class="col-md-12">
-              <div class="form-group">
-                <label for="notiz">Ihre Mitteilung (optional)</label>
-                <textarea id="notiz" name="notiz" class="form-control" placeholder="Teilen Sie uns gerne mit, falls sich Ihr Behandlungsumfang im Vergleich zu Ihrer letzten Behandlung ändern soll." rows="3"></textarea>
-              </div>
-            </div>
-          </div>
-
-          <!-- Absenden -->
-          <div class="row mb-3">
-            <div class="col-md-12">
-              <button type="submit" class="btn btn-success">Absenden</button>
-            </div>
-          </div>
-        </form>
-
-        <div class="row d-none" id="success-message">
-          <div class="col-md-12">
-            Vielen Dank für Ihre Anfrage! <button class="btn btn-secondary" id="back-to-form">Zurück zum Formular</button>
-          </div>
-        </div>
+         <form id="contact-form" action="https://formspree.io/f/mrbgjzpr" method="POST">
+  <!-- Vorname -->
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <div class="form-group bg-cyan bg-lightGreen-hover fg-white">
+        <label for="firstName">Vor- und Nachname</label>
+        <input name="firstName" type="text" id="firstName" class="form-control" placeholder="Vor- und Nachname" required minlength="2">
       </div>
-</div>
+    </div>
+    
+    <!-- E-Mail -->
+    <div class="col-md-6">
+      <div class="form-group bg-cyan bg-lightGreen-hover fg-white">
+        <label for="email">E-Mail Adresse</label>
+        <input name="email" type="email" id="email" class="form-control" placeholder="Wir teilen niemals Ihre E-Mail-Adresse" required>
+      </div>
+    </div>
+  </div>
 
+  <!-- Behandlung -->
+  <div class="row mb-3">
+    <div class="col-md-12">
+      <div class="form-group bg-cyan bg-lightGreen-hover fg-white">
+        <label for="behandlung">Behandlung:</label>
+        <select id="behandlung" name="behandlung" class="form-select" required>
+          <option value="" disabled selected>Bitte wählen</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Terminvorschläge -->
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <div class="form-group bg-cyan bg-lightGreen-hover fg-white">
+        <label for="woche">1. Terminvorschlag:</label>
+        <select id="woche" name="woche" class="form-select" required>
+          <option value="" disabled selected>Bitte wählen</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="form-group bg-cyan bg-lightGreen-hover fg-white">
+        <label for="start">frühstens:</label>
+        <select id="start" name="start" class="form-select" required>
+          <option value="" disabled selected>ab ...</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="form-group bg-cyan bg-lightGreen-hover fg-white">
+        <label for="ende">spätestens:</label>
+        <select id="ende" name="ende" class="form-select" required>
+          <option value="" disabled selected>bis ...</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Zusätzlicher Vorschlag Button -->
+  <button type="button" class="showMore btn btn-outline-primary btn-sm" data-target="addressFields">2. Vorschlag eingeben</button><br>
+
+  <!-- Mitteilung -->
+  <div class="row mb-3">
+    <div class="col-md-12">
+      <div class="form-group">
+        <label for="notiz">Ihre Mitteilung (optional)</label>
+        <textarea id="notiz" name="notiz" class="form-control" placeholder="Teilen Sie uns gerne mit, falls sich Ihr Behandlungsumfang im Vergleich zu Ihrer letzten Behandlung ändern soll." rows="3"></textarea>
+      </div>
+    </div>
+  </div>
+
+  <!-- Absenden -->
+  <div class="row mb-3">
+    <div class="col-md-12">
+      <button type="submit" class="btn btn-success">Absenden</button>
+    </div>
+  </div>
+</form>
 </main>
 <!-- START Footer - Footer- Footer- Footer- Footer- Footer- Footer- Footer- Footer- Footer- Footer- Footer- Footer- Footer- Footer- Footer- Footer- Footer- Footer -->
 <footer class="bg-footer text-white py-4">
