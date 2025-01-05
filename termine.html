@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://laser-haarentfernung.hamburg/termine.html" />
+    <title>Termin Laser Haarentfernung</title>
+
+    <!-- Vollständige Bootstrap CSS für alle Komponenten -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"> <!-- Bootstrap Icons hinzugefügt -->
+<style>  
+    /* Hintergrundfarbe */
+body {
+    background-color: #f0f0f0 !important;
+}
+
+/* Footer-Farbe */
+
+footer, .footer, #footer {
+    background-color: #007bff !important; /* Deine gewünschte Farbe */
+    color: #ffffff !important;
+}
+
+footer a, footer a:hover {
+    color: #ffffff !important;
+}
+
+.success-message {
+            text-align: center;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            border-radius: 5px;
+            font-size: 1.2rem;
+        }
+/* Styling für die Navbar */
+.navbar-nav .nav-link {
+    font-weight: bold; /* Kräftigere Schrift */
+    font-size: 16px;   /* Optionale Schriftgröße, falls du eine bestimmte Größe möchtest */
+}
+
+/* Hover-Effekt für die Menüpunkte */
+.navbar-nav .nav-link:hover {
+    color: #007bff !important; /* Farbe #7a9271 bei Hover */
+}
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.95); /* Weiß mit Transparenz */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+}
+
+
+.btn-custom:hover {
+    background-color: #007bff;
+}
+
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 1.5rem; /* Kleinere Schriftgröße für mobile Geräte */
+    }
+}
+
+/* ----Maximale Breite und Zentrierung für Textabschnitte innerhalb von Bootstrap-Containern */
+.container p, .container h2 {
+    max-width: 600px; /* Ca. 75-80 Zeichen pro Zeile */
+    margin: 0 auto; /* Zentrierung des Textes */
+    line-height: 1.6; /* Angenehme Zeilenhöhe */
+}
+.container-small {
+    max-width: 600px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 0 auto;
+  }
+
+/* Stil für den Header auf den Unterseiten */
+.header-subpage {
+    background-color: #f0f0f0; /* Dezente Hintergrundfarbe */
+    padding: 40px 20px; /* Großzügiges Padding */
+    text-align: center;
+    border-bottom: 4px solid #007bff; /* Farbige Linie unter der Überschrift */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leichter Schattierungseffekt */
+}
+
+.header-subpage h1 {
+    font-size: 2.5rem; /* Größere Schriftgröße für die H1 */
+}
+
+.text-blue {
+    color: #007bff;
+}
+
+
+      /* Gemeinsame Stile */
+      .hidden {
+          display: none;
+      }
+
+      #mitteilung {
+    padding: 5px; /* Mehr Abstand vom Text zum Rand */
+    margin-bottom: 10px; /* Mehr Abstand nach unten */
+    border-radius: 15px; /* Optional: Abgerundete Ecken */
+}
+
+      /* Desktop-spezifisches CSS */
+      #form-desktop .form-row {
+          display: flex;
+          flex-wrap: nowrap;
+          gap: 20px;
+          margin-bottom: 10px;
+      }
+
+      #form-desktop .form-row .form-group {
+          flex: 1;
+      }
+
+      #form-desktop .form-group-checkboxes {
+          display: flex;
+          gap: 8px; /* Abstand Checkbox zu Checkbox*/
+          justify-content: flex-start;
+      }
+
+      #form-desktop .form-group-checkboxes label {
+          font-size: 0.9rem;
+          margin-bottom: 9px; /* Abstand Überschrift zu Checkbox*/
+      }
+
+      #form-desktop select {
+          padding: 4px 8px;
+          font-size: 0.9em; /* Schriftgröße */
+          -webkit-appearance: none; /* Entfernt den nativen Dropdown-Pfeil in Safari/Chrome */
+          -moz-appearance: none; /* Entfernt den nativen Dropdown-Pfeil in Firefox */
+          appearance: none; /* Entfernt den nativen Dropdown-Pfeil in anderen Browsern */
+          background: none; /* Entfernt den Standard-Hintergrund */
+      }
+/* PC Alle Überschriften */
+      #form-desktop label {
+        font-size: 1rem; /* Einheitliche Schriftgröße */
+        font-weight: bold; /* Fettgedruckt */
+        color: #4a90e2; /* Textfarbe */
+        margin-bottom: 5px; /* Abstand nach unten */
+}
+
+#form-desktop input,
+#form-desktop textarea {
+    padding: 4px; /* Innenabstand reduzieren */
+    border: 1px solid #ccc; /* Dünnerer Rahmen Name, email, notiz*/
+    font-size: 0.8rem; /* Kleinere Schrift für label name email, notiz */
+    height: auto; /* Höhe automatisch anpassen */
+    border-radius: 5px; /* Abgerundete Ecken */
+}
+      /* Mobile-spezifisches CSS */
+      #form-smartphone .form-row {
+          display: flex;
+          gap: 5px;
+          align-items: center;
+          color: #4a90e2; /* Farbe des Texts */
+          font-size: 0.9rem; /* Schriftgröße */
+      }
+
+      #form-smartphone .form-row .form-group {
+          flex: 1;
+          margin-bottom: 15px;
+      }
+
+  #form-smartphone .form-row .form-group.select-small {
+          flex: 0 0 auto;
+          width: auto;
+      }
+
+      #form-smartphone .form-group-checkboxes {
+          display: flex;
+          gap: 5px; /* Angleichung des Paddings an die Zeitfelder */
+          justify-content: center;
+      }
+
+      #form-smartphone .form-group-checkboxes .col-md-2 {
+          gap: 5px;
+          text-align: left;
+          gap: 3px;
+
+      }
+
+      #form-smartphone .form-group-checkboxes label {
+          display: block;
+          font-size: 0.8rem; /* Checkboxen Größe der Überschrift*/
+          margin-bottom: 2px; /* Checkboxen abstand zu Überschrift*/
+          text-align: center;
+      }
+
+      #form-smartphone select {
+          padding: 2px 8px;
+          font-size: 0.7rem;
+          color: #666; /* Farbe des Texts */
+          -webkit-appearance: none; /* Entfernt den nativen Dropdown-Pfeil in Safari/Chrome */
+            -moz-appearance: none; /* Entfernt den nativen Dropdown-Pfeil in Firefox */
+            appearance: none; /* Entfernt den nativen Dropdown-Pfeil in anderen Browsern */
+            background: none; /* Entfernt den Standard-Hintergrund */
+      }
+
+      #form-smartphone .form-select.select-small {
+          width: auto;
+
+      }
+
+      input[type="checkbox"] {
+          transform: scale(1.0); /* Größe der Checkboxen */
+      }
+      #behandlung-label {
+          color: #4a90e2; /* Farbe des Texts */
+          font-size: 1.2rem; /* Schriftgröße */
+          font-weight: bold; /* Fettgedruckter Text */
+          margin-bottom: 5px; /* Abstand zum Dropdown */
+          display: block; /* Damit der Text oberhalb des Dropdowns steht */
+      }
+      #behandlung option {
+      color: #666; /* Farbe des Texts */
+      font-size: 1rem; /* Schriftgröße */
+      background-color: #f9f9f9; /* Hintergrundfarbe */
+      }
+
+      #behandlung option:disabled {
+          color: #bbb; /* Farbe des Texts für die deaktivierte Option */
+          font-style: italic; /* Kursiver Text */
+      }
+      #behandlung {
+          color: #333; /* Textfarbe */
+          font-size: 1rem; /* Schriftgröße */
+          padding: 10px; /* Innenabstand */
+          border: 1px solid #ccc; /* Rahmenfarbe */
+          border-radius: 5px; /* Abgerundete Ecken */
+          background-color: #fff; /* Hintergrundfarbe */
+          width: 100%; /* Breite */
+      }
+
+
+      #form-smartphone input,
+      #form-smartphone textarea {
+    padding: 4px; /* Innenabstand reduzieren */
+    border: 1px solid #ccc; /* Dünnerer Rahmen Name, email, notiz*/
+    font-size: 0.7rem; /* Kleinere Schrift für label name email, notiz */
+    height: auto; /* Höhe automatisch anpassen */
+    border-radius: 5px; /* Abgerundete Ecken */
+
+}
+      
+  </style>
+  <script>
+      function updateFormVisibility() {
+          const isMobile = window.innerWidth <= 768;
+          const formMobile = document.getElementById('form-smartphone');
+          const formDesktop = document.getElementById('form-desktop');
+
+          if (isMobile) {
+              formMobile.classList.remove('hidden');
+              formDesktop.classList.add('hidden');
+          } else {
+              formDesktop.classList.remove('hidden');
+              formMobile.classList.add('hidden');
+          }
+      }
+
+      document.addEventListener('DOMContentLoaded', updateFormVisibility);
+      window.addEventListener('resize', updateFormVisibility);
+  </script>
+      <script>
+        function resetForm(formId) {
+            document.getElementById(formId).reset();
+        }
+
+    </script>
+  <script>
+      // Optionen für Datum
+      const DateOptions = `
+          <option value="" disabled selected>In der Woche... </option>
+          <option value="06.01-10.01">06.01 - 10.01</option>
+          <option value="13.01-17.01">13.01 - 17.01</option>
+          <option value="20.01-24.01">20.01 - 24.01</option>
+          <option value="27.01-31.01">27.01 - 31.01</option>
+          <option value="03.02-07.02">03.02 - 07.02</option>
+          <option value="10.02-14.02">10.02 - 14.02</option>
+          <option value="17.02-21.02">17.02 - 21.02</option>
+          <option value="24.02-28.02">24.02 - 28.02</option>
+          <option value="03.03-07.03">03.03 - 07.03</option>
+          <option value="10.03-14.03">10.03 - 14.03</option>
+          <option value="17.03-21.03">17.03 - 21.03</option>
+          <option value="24.03-28.03">24.03 - 28.03</option>
+      `;
+
+      // Optionen für Start-Zeit
+      const StartOptions = `
+          <option value="" disabled selected>ab...</option>
+          <option value="08:30">08:30</option>
+          <option value="09:00">09:00</option>
+          <option value="09:30">09:30</option>
+          <option value="10:00">10:00</option>
+          <option value="10:30">10:30</option>
+          <option value="11:00">11:00</option>
+          <option value="11:30">11:30</option>
+          <option value="12:00">12:00</option>
+          <option value="12:30">12:30</option>
+          <option value="13:00">13:00</option>
+          <option value="13:30">13:30</option>
+          <option value="14:00">14:00</option>
+          <option value="14:30">14:30</option>
+          <option value="15:00">15:00</option>
+          <option value="15:30">15:30</option>
+          <option value="16:00">16:00</option>
+          <option value="16:30">16:30</option>
+          <option value="17:00">17:00</option>
+          <option value="17:30">17:30</option>
+          <option value="18:00">18:00</option>
+          <option value="18:30">18:30</option>
+      `;
+
+      // Optionen für End-Zeit
+      const EndOptions = `
+          <option value="" disabled selected>bis...</option>
+          <option value="09:00">09:00</option>
+          <option value="09:30">09:30</option>
+          <option value="10:00">10:00</option>
+          <option value="10:30">10:30</option>
+          <option value="11:00">11:00</option>
+          <option value="11:30">11:30</option>
+          <option value="12:00">12:00</option>
+          <option value="12:30">12:30</option>
+          <option value="13:00">13:00</option>
+          <option value="13:30">13:30</option>
+          <option value="14:00">14:00</option>
+          <option value="14:30">14:30</option>
+          <option value="15:00">15:00</option>
+          <option value="15:30">15:30</option>
+          <option value="16:00">16:00</option>
+          <option value="16:30">16:30</option>
+          <option value="17:00">17:00</option>
+          <option value="17:30">17:30</option>
+          <option value="18:00">18:00</option>
+          <option value="18:30">18:30</option>
+          <option value="19:00">19:00</option>
+      `;
+  </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+      // Datum-Dropdown füllen
+      const DateDropdown = document.getElementById('woche');
+      if (DateDropdown) {
+          DateDropdown.innerHTML = DateOptions;
+      }
+      const DateDropdownM = document.getElementById('wocheM');
+      if (DateDropdownM) {
+          DateDropdownM.innerHTML = DateOptions;
+      }
+      const DateDropdown2 = document.getElementById('woche2');
+      if (DateDropdown2) {
+          DateDropdown2.innerHTML = DateOptions;
+      }
+      const DateDropdownM2 = document.getElementById('wocheM2');
+      if (DateDropdownM2) {
+          DateDropdownM2.innerHTML = DateOptions;
+      }
+      // Start-Zeit-Dropdown füllen
+      const StartDropdown = document.getElementById('start');
+      if (StartDropdown) {
+          StartDropdown.innerHTML = StartOptions;
+      }
+      const StartDropdownM = document.getElementById('startM');
+      if (StartDropdownM) {
+          StartDropdownM.innerHTML = StartOptions;
+      }
+      const StartDropdown2 = document.getElementById('start2');
+      if (StartDropdown2) {
+          StartDropdown2.innerHTML = StartOptions;
+      }
+      const StartDropdownM2 = document.getElementById('startM2');
+      if (StartDropdownM2) {
+          StartDropdownM2.innerHTML = StartOptions;
+      }
+      // End-Zeit-Dropdown füllen
+      const EndDropdown = document.getElementById('ende');
+      if (EndDropdown) {
+      EndDropdown.innerHTML = EndOptions;
+      }
+      const EndDropdownM = document.getElementById('endeM');
+      if (EndDropdownM) {
+      EndDropdownM.innerHTML = EndOptions;
+      }
+      const EndDropdown2 = document.getElementById('ende2');
+      if (EndDropdown2) {
+      EndDropdown2.innerHTML = EndOptions;
+      }
+      const EndDropdownM2 = document.getElementById('endeM2');
+      if (EndDropdownM2) {
+      EndDropdownM2.innerHTML = EndOptions;
+      }
+  });
+</script>
+</head>
+<body>
+
+<!-- START Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+      <!-- Logo / Brand -->
+      <a class="navbar-brand" href="#">
+          <img src="assets/images/favicon-DL.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+          Derma Light
+      </a>
+  <!-- Navbar Toggle Button (für mobile Ansichten) -->
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <!-- Mittig angeordnete Menüpunkte -->
+  <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+          <li class="nav-item">  
+              <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="damenDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Damen</a>
+                  <ul class="dropdown-menu" aria-labelledby="damenDropdown">
+                      <li><a class="dropdown-item" href="frauen.html">Damen</a></li> 
+                      <li><a class="dropdown-item" href="intimbereich.html">Intimbereich</a></li>
+                      <li><a class="dropdown-item" href="bikini.html">Bikinizone</a></li>
+                      <li><a class="dropdown-item" href="beine.html">Beine</a></li>
+                      <li><a class="dropdown-item" href="achseln.html">Achseln</a></li>
+                      <li><a class="dropdown-item" href="bauch.html">Bauchnabel</a></li>
+                      <li><a class="dropdown-item" href="gesicht.html">Gesicht</a></li>
+                      <li><a class="dropdown-item" href="arme.html">Arme</a></li>
+                      <li><a class="dropdown-item" href="brustwarzen.html">Brust</a></li>
+                      <li><a class="dropdown-item" href="pofalte.html">Gesäß</a></li>
+                  </ul>
+          </li>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="damenDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Männer</a>
+                  <ul class="dropdown-menu" aria-labelledby="damenDropdown">
+                      <li><a class="dropdown-item" href="maenner.html">Männer</a></li> 
+                      <li><a class="dropdown-item" href="ruecken.html">Rücken</a></li>
+                  </ul>
+          </li>
+          <li class="nav-item">
+                  <a class="nav-link" href="ergebnisse.html">Ergebnisse</a>
+          </li>
+      </ul>
+  </div>
+  </div>
+</nav>
+<!-- ENDE Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar -->
+    <!-- Header-Bereich -->
+    <header class="header-subpage">
+      <h1>Termine zu Laser-Haarentfernung</h1>
+      <p class="lead">Hier finden Sie hier Ihren Wunschtermin</p>
+  </header>
+
+  <!-- Hauptinhalt -->
+  <main class="container mt-4">
+
+      <section class="mt-5">
+          <h2 class="text-center">Nutzen Sie dazu einfach unser Kontaktformular</h2>
+          <p>Wir freuen uns, dass Sie einen Termin mit uns vereinbaren möchten! Bitte nutzen Sie das untenstehende Formular, um uns Ihre Terminvorschläge zu senden. Sie können beliebig viele Vorschläge machen, damit wir den für Sie passenden Termin finden können.</p><br>
+          <p>Sobald wir Ihre Vorschläge gesichtet haben, erhalten Sie umgehend eine Terminbestätigung per E-Mail.</p><br>
+          <p>Vielen Dank für Ihre Anfrage!</p><br>
+      </section>
+    
+  <div class="container-small">
+      <div class="card p-4">
+<!-- Formular PC Start -->
+       <form id="contact-form" action="https://formspree.io/f/mrbgjzpr" method="POST">
+    
+    <!-- Woche_1 auswählen -->
+    <div class="form-row">
+      <div class="form-group">
+          <label for="woche">Datum</label>
+          <select id="woche" name="woche" class="form-select DateOptions">
+              <!-- Optionen werden hier dynamisch eingefügt -->
+          </select>
+      </div>
+
+    <!-- Tage_1 auswählen -->
+      <div class="form-group">
+          <div class="form-group-checkboxes">
+              <div class="col-md-2">
+                  <label for="montag">Mo</label>     <input class="custom-checkbox" type="checkbox" id="montag_pc"     name="wochentag[]" value="Montag">        </div>  <div class="col-md-2">
+                  <label for="dienstag">Di</label>   <input class="custom-checkbox" type="checkbox" id="dienstag_pc"   name="wochentag[]" value="Dienstag">      </div>  <div class="col-md-2">
+                  <label for="mittwoch">Mi</label>   <input class="custom-checkbox" type="checkbox" id="mittwoch_pc"   name="wochentag[]" value="Mittwoch">      </div>  <div class="col-md-2">
+                  <label for="donnerstag">Do</label> <input class="custom-checkbox" type="checkbox" id="donnerstag_pc" name="wochentag[]" value="Donnerstag">    </div>  <div class="col-md-2">
+                  <label for="freitag">Fr</label>    <input class="custom-checkbox" type="checkbox" id="freitag_pc"    name="wochentag[]" value="Freitag">       </div>  
+            </div>
+      </div>
+
+    <!-- Frühestens_1 Zeit -->
+      <div class="form-group">
+          <label for="start">Frühestens:</label>
+          <select id="start" name="start" class="form-select StartOptions">
+              <!-- Optionen werden hier dynamisch eingefügt -->
+          </select>
+      </div>
+
+    <!-- Spätestens_1 Zeit -->
+      <div class="form-group">
+          <label for="ende">Spätestens:</label>
+          <select id="ende" name="ende" class="form-select EndOptions">
+              <!-- Optionen werden hier dynamisch eingefügt -->
+          </select>
+      </div>
+  </div>
+
+  <div class="form-row">
+
+    <!-- Woche_2 auswählen -->
+    <div class="form-group">
+
+        <select id="woche2" name="woche2" class="form-select DateOptions2">
+            <!-- Optionen werden hier dynamisch eingefügt -->
+        </select>
+    </div>
+
+    <!-- Tage_2 auswählen -->
+    <div class="form-group">
+        <div class="form-group-checkboxes">
+            <div class="col-md-2"> <input class="custom-checkbox" type="checkbox" id="montag_pc2"       name="wochentag2[]" value="Montag">     </div>
+            <div class="col-md-2"> <input class="custom-checkbox" type="checkbox" id="dienstag_pc2"     name="wochentag2[]" value="Dienstag">   </div>
+            <div class="col-md-2"> <input class="custom-checkbox" type="checkbox" id="mittwochp_c2"     name="wochentag2[]" value="Mittwoch">   </div>
+            <div class="col-md-2"> <input class="custom-checkbox" type="checkbox" id="donnerstag_pc2"   name="wochentag2[]" value="Donnerstag"> </div>
+            <div class="col-md-2"> <input class="custom-checkbox" type="checkbox" id="freitag_pc2"      name="wochentag2[]" value="Freitag">    </div>
+        </div>
+    </div>
+
+    <!-- Frühestens_2 Zeit -->
+    <div class="form-group">
+        <select id="start2" name="start2" class="form-select StartOptions">
+            <!-- Optionen werden hier dynamisch eingefügt -->
+        </select>
+    </div>
+
+    <!-- Spätestens_2 Zeit -->
+    <div class="form-group">
+        <select id="ende2" name="ende2" class="form-select EndOptions">
+            <!-- Optionen werden hier dynamisch eingefügt -->
+        </select>
+    </div>
+</div>
+<!-- Name -->
+<div class="form-row">
+    <div class="col-6">
+        <div class="form-group">
+            <label for="firstName">Vor- und Nachname</label>
+            <input name="firstName" type="text" id="firstName" class="form-control" placeholder="Vor- und Nachname" required minlength="2">
+        </div>
+    </div>
+<!-- E-Mail -->
+    <div class="col-5">
+        <div class="form-group">
+            <label for="email_desktop">E-Mail Adresse</label>
+            <input name="email" type="email" id="email_desktop" class="form-control" placeholder="Wir teilen niemals Ihre E-Mail-Adresse" required>
+        </div>
+    </div>
+</div>
+<!-- Terminart -->
+<div class="form-row">
+    <div class="col-6">
+        <div class="form-group">
+            <label for="behandlung" id="behandlung-label">Terminart:</label>
+            <select id="behandlung-label" name="behandlung" class="form-select" required>
+                <option value="" disabled selected>Bitte wählen</option>
+                <option value="Beratung">Beratung</option>
+                <option value="BeratBeha">Beratung und Behandlung</option>
+                <option value="BehaNorm">Behandlung (wie immer)</option>
+                <option value="BehaMitteil">Behandlung (siehe Mitteilung)</option>
+            </select>
+        </div>
+    </div>
+    <!-- Notiz -->
+    <div class="col-5">
+        <div class="form-group">
+            <label for="mitteilung">Ihre Mitteilung (optional)</label>
+            <textarea id="mitteilung" name="mitteilung" class="form-control" rows="2" placeholder="Teilen Sie uns gerne mit, falls sich etwas ändern sollte"></textarea>
+        </div>
+    </div>
+</div>
+    <div>
+        <button type="button" class="btn btn-warning mt-4" onclick="resetForm('form-desktop')">Zurücksetzen</button>
+        <button type="submit" class="btn btn-success mt-4">Absenden</button>
+    </div>
+</form>
+<!-- Formular PC Ende -->  
+<!-- Formular Mobil Start -->    
+<form id="contact-form" action="https://formspree.io/f/mrbgjzpr" method="POST">
+
+    <div class="form-row">
+        <!-- Mobil Woche_1 auswählen -->
+                <div class="form-group select-small">
+                    <label for="wocheM">Datum:</label>
+                    <select id="wocheM" name="wocheM" class="form-select DateOptions">
+                        <!-- Optionen werden hier dynamisch eingefügt -->
+                    </select>
+                </div>
+
+        <!-- Mobil Tage_1 auswählen -->
+        <div class="form-group">
+            <div class="form-group-checkboxes">
+                <div class="col-md-2">
+                    <label for="montag">M</label>
+                    <input class="custom-checkbox" type="checkbox" id="montag" name="wochentagM[]" value="Montag">
+                </div>
+                <div class="col-md-2">
+                    <label for="dienstag">D</label>
+                    <input class="custom-checkbox" type="checkbox" id="dienstag" name="wochentagM[]" value="Dienstag">
+                </div>
+                <div class="col-md-2">
+                    <label for="mittwoch">M</label>
+                    <input class="custom-checkbox" type="checkbox" id="mittwoch" name="wochentagM[]" value="Mittwoch">
+                </div>
+                <div class="col-md-2">
+                    <label for="donnerstag">D</label>
+                    <input class="custom-checkbox" type="checkbox" id="donnerstag" name="wochentagM[]" value="Donnerstag">
+                </div>
+                <div class="col-md-2">
+                    <label for="freitag">F</label>
+                    <input class="custom-checkbox" type="checkbox" id="freitag" name="wochentagM[]" value="Freitag">
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobil Frühestens_1 Zeit -->
+        <div class="form-group">
+            <label for="startM">Frühstens</label>
+            <select id="startM" name="startM" class="form-select StartOptions">
+                <!-- Optionen werden hier dynamisch eingefügt -->
+            </select>
+        </div>
+
+        <!-- Mobil Spätestens_1 Zeit -->
+        <div class="form-group">
+            <label for="endeM">Spätestens</label>
+            <select id="endeM" name="endeM" class="form-select EndOptions">
+                <!-- Optionen werden hier dynamisch eingefügt -->
+            </select>
+        </div>
+
+    </div>
+    <div class="form-row">
+        <!-- Mobil 2.Woche auswählen -->
+        <div class="form-group select-small">
+            <select id="wocheM2" name="wocheM2" class="form-select DateOptions">
+                <!-- Optionen werden hier dynamisch eingefügt -->
+            </select>
+        </div>
+
+        <!-- Mobil Tage_2 auswählen -->
+        <div class="form-group">
+            <div class="form-group-checkboxes">
+                <div class="col-md-2">
+                    <input class="custom-checkbox" type="checkbox" id="montag" name="wochentagM2[]" value="Montag">                </div>
+                <div class="col-md-2">
+                    <input class="custom-checkbox" type="checkbox" id="dienstag" name="wochentagM2[]" value="Dienstag">            </div>
+                <div class="col-md-2">
+                    <input class="custom-checkbox" type="checkbox" id="mittwoch" name="wochentagM2[]" value="Mittwoch">            </div>
+                <div class="col-md-2">
+                    <input class="custom-checkbox" type="checkbox" id="donnerstag" name="wochentagM2[]" value="Donnerstag">        </div>
+                <div class="col-md-2">
+                    <input class="custom-checkbox" type="checkbox" id="freitag" name="wochentagM2[]" value="Freitag">              </div>
+            </div>
+        </div>
+
+        <!-- Mobil Frühestens_2 Zeit -->
+        <div class="form-group">
+            <select id="startM2" name="startM2" class="form-select StartOptions">
+                <!-- Optionen werden hier dynamisch eingefügt -->
+            </select>
+        </div>
+
+        <!-- Mobil Spätestens_2 Zeit -->
+        <div class="form-group">
+            <select id="endeM2" name="endeM2" class="form-select EndOptions">
+                <!-- Optionen werden hier dynamisch eingefügt -->
+            </select>
+        </div>
+
+    </div>
+        
+    <!-- Mobil Name -->
+        <div class="form-row">
+            <div class="col-6">
+              <div class="form-group">
+                <label for="firstName">Vor-/ Nachname</label>
+                <input name="firstName" type="text" id="firstName" class="form-control form-control-sm" placeholder="Vor- und Nachname" required minlength="2">
+              </div>
+            </div>
+            
+    <!-- Mobil E-Mail -->
+            <div class="col-6">
+              <div class="form-group">
+                <label for="email">E-Mail Adresse</label>
+                <input name="email" type="email" id="email" class="form-control form-control-sm" placeholder="Wir teilen niemals Ihre E-Mail-Adresse" required>
+              </div>
+            </div>
+        </div>
+
+            <!-- Mobil Behandlung -->
+        <div class="form-row">     
+            <div class="form-group">
+                <label for="behandlung" id="behandlung-label">Terminart:</label>
+                <select id="behandlung-label" name="behandlung" class="form-select" required>
+                    <option value="" disabled selected>Bitte wählen</option>
+                    <option value="Beratung">Beratung</option>
+                    <option value="BeratBeha">Beratung und Behandlung</option>
+                    <option value="BehaNorm">Behandlung (wie immer)</option>
+                    <option value="BehaMitteil">Behandlung (siehe Mitteilung)</option>
+                </select>
+            </div>
+
+              <!-- Mobil Notiz -->
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="notiz">Ihre Mitteilung (optional)</label>
+                    <textarea id="notiz" name="mitteilung" class="form-control-sm" placeholder="Hinterlassen Sie hier gerne eine Mitteilung." rows="3"></textarea>
+                </div>
+            </div>  
+        </div>
+
+         <button type="button" class="btn btn-warning mt-4" onclick="resetForm('form-smartphone')">Zurücksetzen</button>
+         <button type="submit" class="btn btn-success mt-4">Absenden</button>
+
+    </form>
+</div>
+
+<section class="mt-5">
+  <h2 class="text-center">Wer ist für die Laser Haarentfernung nicht geeignet?</h2>
+  <p>Achtung: Helle Haare</p><br>
+  <p>Leider können wir blonde, grau-weiße und rote Haare nicht mit dem Diodenlaser behandeln. Das Laserlicht wird nur vom Melanin (Pigment) des Haares angezogen. Deshalb können diese Haarfarben nicht behandelt werden.</p><br>
+  <p>Achtung: Dunkle Haut</p><br>
+  <p>Wir verwenden ausschließlich den 808 nm Diodenlaser.</p><br>
+  <p>Da der Diodenlaser mit einer relativ niedrigen Wellenlänge arbeitet, ist er für helle Hauttypen (1 bis 3) sehr leistungsstark und gleichzeitig sicher. Für dunkle oder schwarze Haut wird dieser Lasertyp nicht empfohlen.</p><br>
+
+</section>
+
+</main>
+
+<!-- START Footer - Footer- Footer- Footer- Footer- Footer- Footer- Footer- Footer- Footer- Footer- Footer- Footer- Footer- Footer- Footer- Footer- Footer- Footer -->
+<footer class="bg-footer text-white py-4">
+  <div class="container">
+      <div class="row">
+
+          <!-- Kontaktdaten -->
+          <div class="col-md-4">
+              <h5>Kontakt</h5>
+              <p>Derma Light Haarentfernung</p>
+              <p>Gertrudenkirchhof 10<br>20095 Hamburg</p>
+              <p>Telefon: <a href="tel:04055435357" class="text-white">040 55435357</a></p>
+          </div>
+
+          <!-- Rechtliches -->
+          <div class="col-md-4">
+              <h5>Rechtliches</h5>
+              <ul class="list-unstyled">
+                <li><a href="impressum.html" class="text-white">Impressum</a></li>
+                  <li><a href="datenschutz.html" class="text-white">Datenschutz</a></li>
+              </ul>
+          </div>
+
+          <!-- Quick-Links -->
+          <div class="col-md-4">
+              <h5>Quick-Links</h5>
+              <ul class="list-unstyled">
+                  <li><a href="termine.html" class="text-white">Termin-Seite</a></li>
+                  <li><a href="preise.html" class="text-white">Preisliste</a></li>
+                  <li><a href="https://focus-arztsuche.de/magazin/ratgeber/hauttyp-bestimmen-und-sonnenschutz-anpassen" class="text-white">Hauttyp bestimmen</a></li>
+              </ul>
+          </div>
+
+      </div>
+
+      <div class="row mt-4">
+          <div class="col text-center">
+              <p class="mb-0">© Derma Light Haarentfernung 2024</p>
+          </div>
+      </div>
+  </div>
+</footer>
+<!-- ENDE  - Footerss- Footer- Footer- Footer- Footer- Footer- Footer- Footer- Footer- Footer- Footer- Footer- Footer- Footer- Footer- Footer- Footer- Footer -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+  </body>
+</html>
